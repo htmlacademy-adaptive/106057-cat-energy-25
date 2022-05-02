@@ -1,11 +1,14 @@
 .rewiew {
   padding: 25px 20px;
   background-color: @grey-92;
+  outline: 1px solid #ffbb00;
 }
 
 .rewiew__title {
+  margin: 0;
   margin-bottom: 40px;
   font-family: @font-family-second;
+  font-weight: @font-weight-base;
   font-size: 36px;
   line-height: 40px;
 }
@@ -16,12 +19,16 @@
 }
 
 .rewiew__list {
+  display: flex;
+  justify-content: space-between;
   .list-reset();
   margin-bottom: 34px;
 }
 
 .rewiew__item {
   position: relative;
+  width: 124px;
+  height: 56px;
   padding-top: 15px;
   text-align: center;
   box-sizing: border-box;
@@ -37,9 +44,7 @@
 
 .rewiew__description {
   position: absolute;
-  left: 22px;
-  right: 25px;
-  top: 46px;
+  right: 20px;
   padding: 5px 14px;
   font-size: 12px;
   line-height: 12px;
@@ -50,10 +55,18 @@
 .rewiew__price {
   font-family: @font-family-second;
   line-height: 20px;
+  text-align: center;
   text-transform: uppercase;
 }
 
 .rewiew__gallery {
+  padding-top: 15px;
+  text-align: center;
+}
+
+.slider {
+  display: flex;
+  justify-content: space-between;
   padding: 15px 55px;
 }
 
@@ -62,4 +75,6 @@
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
+  background-color: inherit;
+  border: none;
 }

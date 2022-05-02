@@ -1,16 +1,26 @@
 .feed-feature {
-  padding: 20px 21px;
+  padding-bottom: 20px;
+  padding-left: 21px;
+  padding-right: 21px;
+  outline: 1px solid #ffbb00;
 }
 
 .feed-feature__title {
+  margin: 0;
   margin-bottom: 40px;
   font-family: @font-family-second;
+  font-weight: @font-weight-base;
   font-size: 36px;
   line-height: 40px;
 }
 
+.feed-feature__list {
+  .list-reset();
+}
+
 .feed-feature__item {
-  margin-bottom: 20px;
+  margin-bottom: 26px;
+  padding-left: 80px;
   color: @special-dark-grey;
 }
 

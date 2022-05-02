@@ -92,12 +92,14 @@
           </div>
         </dl>
         <p class="rewiew__price">Затраты на питание: 15 000 РУБ.</p>
-        <div class="rewiew__gallery slider">
+        <div class="rewiew__gallery">
           <img src="img/cat-porky-mobile.png" width="280" height="232" alt="Толстый кот до начала фитнес-питания.">
           <img class="slider__image-hidden " src="img/cat-skinny-mobile.png" width="280" height="267" alt="Худой кот после программы фитнес-питания.">
-          <button class="slider__toggle" type="button">было</button>
-          <div class="slider__range"></div>
-          <button class="slider__toggle" type="button">стало</button>
+          <div class="slider">
+            <button class="slider__toggle" type="button">было</button>
+            <div class="slider__range"></div>
+            <button class="slider__toggle" type="button">стало</button>
+          </div>
         </div>
       </section>
     </main>
@@ -106,16 +108,20 @@
       <section class="page-footer__contacts contacts">
         <h2 class="visually-hidden">Контакты</h2>
 
-        <p class="contacts__call">приглашаем к сотрудничеству дилеров!</p>
-        <p class="contacts__adress">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+        <div class="contacts__container">
+          <p class="contacts__call">приглашаем к сотрудничеству дилеров!</p>
+          <p class="contacts__adress">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+        </div>
         <div class="contacts__map">
           <img src="img/map-mobile.png" width="320" height="362" alt="Cat Energy на карте.">
         </div>
       </section>
 
-      <section class="page-footer__reference ref"></section>
+      <section class="page-footer__reference ref">
+        <h2 class="visually-hidden">Важные ссылки</h2>
+
         <a class="ref__logo-name">
-          <img src="img/logo-name.svg" width="101" height="18" alt="Cat Energy">
+          <img src="img/logo-name.svg" width="128" height="24" alt="Cat Energy">
         </a>
 
         <article class="ref__social social">
