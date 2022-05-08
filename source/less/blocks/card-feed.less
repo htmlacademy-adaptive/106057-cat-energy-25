@@ -1,0 +1,48 @@
+.card-feed {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  padding-bottom: 25px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-bottom: 1px solid @grey-eb;
+}
+
+.card-feed__order-button {
+  grid-column: ~"1 / -1";
+}
+
+.card-feed__link-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.card-feed__container-text {
+  padding-top: 20px;
+  padding-bottom: 23px;
+}
+
+.card-feed__link-title {
+  display: block;
+  padding-right: 50px;
+  padding-bottom: 14px;
+  font-size: 16px;
+  line-height: 20px;
+  color: @grey-22;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.card-feed__specification-list {
+  .specification-columns2();
+  font-size: 12px;
+  line-height: 16px;
+  color: @grey-44;
+}
+
+.card-feed__value {
+  margin: 0;
+  text-align: right;
+}
