@@ -1,7 +1,8 @@
 # Личный проект «Кэт энерджи»
 
 * Студент: [Оксана Савинова](https://up.htmlacademy.ru/adaptive/25/user/106057).
-* Наставник: `Андрей Грачев`.
+* Наставник: `Андрей Грачев https://github.com/andreysgra/cat-energy
+https://dropmefiles.com/QzeZO `.
 
 ---
 

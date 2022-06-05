@@ -1,0 +1,65 @@
+.form-field--input {
+  display: flex;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.form-field__label {
+  margin-right: 10px;
+  color: @grey-44;
+}
+
+.form-field__label--radio {
+  margin-right: 0;
+  color: @grey-22;
+}
+
+.form-field__input {
+  width: 100%;
+  padding: 15px 15px;
+  font-family: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  color: @grey-44;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  border: 1px solid @grey-e7;
+  border-radius: unset;
+}
+
+.form-field__textarea {
+  padding: 10px 12px;
+}
+
+.form-field__radio-mark {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: -7px;
+  left: 0;
+  border: 1px solid @grey-cd;
+  border-radius: 50%;
+}
+
+.form-field__radio:checked + .form-field__radio-mark {
+  background-color: @green-basic;
+  box-shadow: inset 0 0 0 8px @white;
+}
+
+.form-field__check-mark {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: -7px;
+  left: 0;
+  border: 1px solid @grey-cd;
+}
+
+.form-field__checkbox:checked + .form-field__check-mark {
+  background-image: url("../img/icons/check-green.svg");
+  background-position: 50% 50%;
+  background-size: 18px 14px;
+  background-repeat: no-repeat;
+}
