@@ -3,7 +3,19 @@
   padding-right: 20px;
   text-align: center;
   background-color: @grey-f2;
-  outline: 1px solid #ffbb00;
+  outline: 3px solid #ff00bb;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 110px;
+    padding-right: 110px;
+  }
 }
 
 .reference__logo-name {

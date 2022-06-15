@@ -1,4 +1,14 @@
 .page-container {
+  margin: 0 auto;
+  min-width: @mobile-width;
+  max-width: @desktop-width;
   width: @mobile-width;
-  outline: 1px solid #ffbb00;
+
+  @media (min-width: @tablet-width) {
+    width: @tablet-width;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: @desktop-width;
+  }
 }

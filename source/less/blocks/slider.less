@@ -2,6 +2,10 @@
   display: flex;
   justify-content: space-between;
   padding: 15px 55px;
+
+  @media (min-width: @tablet-width) {
+    padding: 15px 70px;
+  }
 }
 
 .slider__toggle {
@@ -11,4 +15,9 @@
   text-transform: uppercase;
   background-color: inherit;
   border: none;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
