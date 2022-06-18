@@ -1,19 +1,13 @@
 .feed-feature {
   padding-bottom: 20px;
-  padding-left: 21px;
-  padding-right: 21px;
   outline: 3px solid #bb00ff;
 
   @media (min-width: @tablet-width) {
-    margin-left: 30px;
-    margin-right: 30px;
     padding-top: 25px;
     padding-left: 0;
   }
 
   @media (min-width: @desktop-width) {
-    margin-left: 110px;
-    margin-right: 110px;
     padding-top: 50px;
   }
 }
@@ -34,14 +28,15 @@
 
   @media (min-width: @tablet-width) {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
     gap: 37px 153px;
   }
 
   @media (min-width: @desktop-width) {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
   }
 }
 

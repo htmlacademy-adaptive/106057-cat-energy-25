@@ -1,6 +1,5 @@
 .contacts {
   position: relative;
-  outline: 3px solid #ff00bb;
 }
 
 .contacts--inner {
@@ -10,10 +9,11 @@
 .contacts__container {
   display: flex;
   justify-content: space-between;
-  padding: 26px 20px;
+  padding: 26px 0;
+  outline: 3px solid #ff00bb;
 
   @media (min-width: @tablet-width) {
-    padding: 56px 70px;
+    padding: 56px 40px;
   }
 
   @media (min-width: @desktop-width) {
@@ -66,13 +66,5 @@
   @media (min-width: @tablet-width) {
     position: relative;
     top: 15px;
-  }
-}
-
-.contacts__map-image {
-  object-fit: cover;
-
-  @media (min-width: @tablet-width) {
-    height: 400px;
   }
 }
