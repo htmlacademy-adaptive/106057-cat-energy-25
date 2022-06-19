@@ -1,9 +1,14 @@
-.reference__container {
-  padding-left: 20px;
-  padding-right: 20px;
-  text-align: center;
+.reference {
   background-color: @grey-f2;
-  outline: 1px solid #ffbb00;
+}
+
+.reference__container {
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .reference__logo-name {

@@ -1,7 +1,5 @@
 .page-body {
   margin: 0;
-  display: flex;
-  flex-direction: column;
   min-width: @mobile-width;
   min-height: 100%;
   font-family: @font-family-base;
@@ -12,4 +10,9 @@
 
   color: @font-color-base;
   background-color: @bg-color-body;
+
+  @media (min-width: @tablet-width) {
+    font-size: @font-size-second;
+    line-height: @line-height-second;
+  }
 }

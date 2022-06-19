@@ -1,23 +1,59 @@
 .feed-feature {
   padding-bottom: 20px;
-  padding-left: 21px;
-  padding-right: 21px;
-  outline: 1px solid #ffbb00;
+  outline: 3px solid #bb00ff;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 25px;
+    padding-left: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 50px;
+  }
 }
 
 .feed-feature__title {
   padding-bottom: 40px;
   font-size: 36px;
   line-height: 40px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+  }
 }
 
 .feed-feature__list {
   .list-reset();
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    gap: 37px 153px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+  }
 }
 
 .feed-feature__item {
   margin-bottom: 26px;
   padding-left: 80px;
   color: @grey-44;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 151px;
+    padding-bottom: 37px;
+    padding-left: 0;
+    padding-right: 5px;
+  }
+}
+
+.feed-feature__description {
+  margin: 0;
 }
 
