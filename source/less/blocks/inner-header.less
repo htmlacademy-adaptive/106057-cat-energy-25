@@ -1,14 +1,21 @@
 .inner-header {
   padding-top: 27px;
   padding-bottom: 15px;
-  padding-left: 20px;
-  padding-right: 20px;
-  outline: 3px solid #00bbff;
+
+  @media (min-width: @tablet-width) and (max-width: @desktop-width) {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
 }
 
 .inner-header__title {
   font-size: 36px;
   line-height: 36px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+  }
 }
 
 .inner-header__text {
@@ -16,4 +23,10 @@
   padding-top: 37px;
   font-family: @font-family-second;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    width: 330px;
+    font-size: 20px;
+    line-height: 30px;
+  }
 }

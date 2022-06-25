@@ -1,6 +1,5 @@
 .site-nav__list {
   .list-reset();
-  border-top: 1px solid @grey-e6;
   outline: 3px solid #00bbff;
 
   @media (min-width: @tablet-width) {
@@ -8,13 +7,16 @@
     justify-content: flex-end;
     flex-wrap: wrap;
   }
+
+  @media (min-width: @desktop-width) {
+    max-width: calc(@desktop-width / 2 - 120px);
+  }
 }
 
 .site-nav__item {
   padding-top: 20px;
   padding-bottom: 22px;
   text-align: center;
-  border-bottom: 1px solid @grey-e6;
 }
 
 .site-nav__item:not(:first-child) {
@@ -39,5 +41,11 @@
 
   @media (min-width: @desktop-width) {
     color: @white;
+  }
+}
+
+.site-nav__link--inner {
+  @media (min-width: @desktop-width) {
+    color: @grey-11;
   }
 }
