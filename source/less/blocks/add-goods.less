@@ -4,6 +4,16 @@
   border-top: 2px solid @green-basic;
 }
 
+.add-goods__main-container {
+  @media (min-width: @desktop-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 85px;
+    padding-bottom: 85px;
+  }
+}
+
 .add-goods__container-title {
   padding-top: 20px;
   padding-bottom: 31px;
@@ -22,4 +32,16 @@
   line-height: 24px;
   text-transform: none;
   background-color: @white;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 30px;
+    padding-left: 37px;
+    padding-right: 37px;
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 93px;
+  }
 }

@@ -30,13 +30,17 @@
     justify-content: flex-start;
     align-items: center;
   }
+
+  @media (min-width: @tablet-width) and (max-width: @desktop-width) {
+    padding: 25px 70px;
+  }
 }
 
 .form-program__button-submit {
   width: 100%;
   margin: auto;
   margin-bottom: 21px;
-  font-size: 16px;
+  font-size: @font-size-second;
   line-height: 20px;
   border: none;
 

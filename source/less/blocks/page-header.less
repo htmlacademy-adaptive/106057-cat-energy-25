@@ -18,6 +18,11 @@
 .page-header--inner {
   margin-bottom: 0;
   background: none;
+  border-bottom: 1px solid @grey-d9;
+
+  @media (min-width: @tablet-width) {
+    border-bottom: none;
+  }
 }
 
 .page-header__container {
@@ -38,7 +43,7 @@
 .page-header__logo-container {
   display: flex;
   justify-content: space-between;
-  outline: 3px solid #00dd66;
+  // outline: 3px solid #00dd66;
 }
 
 .page-header__logo-image {

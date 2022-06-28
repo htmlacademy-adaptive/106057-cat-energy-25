@@ -1,0 +1,17 @@
+.catalog-feed {
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 324px 324px;
+    gap: 60px;
+    justify-content: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: repeat(4, 245px);
+    gap: 80px;
+  }
+}
+
+.catalog-feed__card {
+  outline: 2px solid #ffbb00;
+}
