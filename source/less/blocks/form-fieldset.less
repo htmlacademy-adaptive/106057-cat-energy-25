@@ -68,8 +68,6 @@
 }
 
 .form-fieldset__list {
-  display: grid;
-  gap: 15px;
   .list-reset();
   box-sizing: border-box;
 }
@@ -105,6 +103,18 @@
   }
 }
 
+.form-fieldset__item {
+  margin-bottom: 15px;
+}
+
+.form-fieldset__item:last-child {
+  margin-bottom: 0;
+}
+
 .form-fieldset__item-checkbox {
   width: 221px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+  }
 }
