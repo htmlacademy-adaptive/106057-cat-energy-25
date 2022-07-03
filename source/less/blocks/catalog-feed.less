@@ -1,0 +1,26 @@
+.catalog-feed {
+  border-top: 1px solid @grey-eb;
+  border-bottom: 1px solid @grey-eb;
+
+  @media (min-width: @tablet-width) {
+    border: none;
+  }
+}
+
+.catalog-feed__container {
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 324px 324px;
+    gap: 60px;
+    justify-content: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: repeat(4, 245px);
+    gap: 80px;
+  }
+}
+
+.catalog-feed__card {
+  outline: 2px solid #ffbb00;
+}

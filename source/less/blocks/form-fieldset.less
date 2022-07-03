@@ -1,48 +1,120 @@
 .form-fieldset {
-  padding-top: 25px;
-  padding-bottom: 11px;
-  padding-left: 20px;
-  padding-right: 20px;
+  margin: 0;
+  padding: 0;
   border: none;
-  border-bottom: 1px solid @grey-d9;
+}
+
+.form-fieldset__container {
+  padding-top: 25px;
+  padding-bottom: 25px;
+
+  @media (min-width: @tablet-width) and (max-width: @desktop-width) {
+    padding: 25px 70px;
+  }
+}
+
+.form-fieldset__container--narrow {
+  @media (min-width: @tablet-width) and (max-width: @desktop-width) {
+    padding: 25px 40px;
+  }
+}
+
+.form-fieldset__container--input {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+
+.form-fieldset__container--input2 {
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 80px;
+  }
+}
+
+.form-fieldset__field {
+  display: flex;
+  align-items: center;
 }
 
 .form-fieldset--bordertop {
-  position: relative;
-  margin-top: 20px;
+  margin-top: 40px;
   padding-top: 45px;
-  padding-bottom: 20px;
   border-top: 2px solid @green-basic;
   border-bottom: none;
 }
 
-.form-fieldset--big-margintop {
-  margin-top: 44px;
-}
-
-.form-fieldset--big-paddingtop {
-  padding-top: 70px;
-}
-
-
 .form-fieldset__title {
-  position: absolute;
-  top: -17px;
-  left: 0;
+  position: relative;
+  max-width: 190px;
   padding-left: 20px;
   padding-right: 20px;
   font-size: 24px;
   line-height: 26px;
   text-transform: none;
-  background-color: inherit;
+  background-color: @white;
+
+  @media (min-width: @tablet-width) {
+    max-width: none;
+    padding-left: 70px;
+    padding-right: 40px;
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 110px;
+  }
 }
 
 .form-fieldset__list {
   .list-reset();
+  box-sizing: border-box;
+}
+
+.form-fieldset--radio {
+  border-top: 1px solid @grey-d9;
+  border-bottom: 1px solid @grey-d9;
+
+  @media (min-width: @tablet-width) {
+    border: none;
+  }
+}
+
+.form-fieldset__list--radio {
+  @media (min-width: @tablet-width) {
+    padding: 25px 27px;
+    border: 1px solid @grey-e7;
+    box-sizing: border-box;
+  }
+}
+
+.form-fieldset__list--checkbox {
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 45px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: start;
+    column-gap: 105px;
+  }
 }
 
 .form-fieldset__item {
-  position: relative;
-  padding-left: 45px;
-  padding-bottom: 25px;
+  margin-bottom: 15px;
+}
+
+.form-fieldset__item:last-child {
+  margin-bottom: 0;
+}
+
+.form-fieldset__item-checkbox {
+  width: 221px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+  }
 }

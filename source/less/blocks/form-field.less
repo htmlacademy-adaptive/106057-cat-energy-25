@@ -1,17 +1,16 @@
-.form-field--input {
-  display: flex;
-  align-items: center;
-  margin-bottom: 14px;
-}
-
 .form-field__label {
   margin-right: 10px;
+  white-space: nowrap;
   color: @grey-44;
 }
 
 .form-field__label--radio {
   margin-right: 0;
   color: @grey-22;
+}
+
+.form-field__label--check {
+  color: @black;
 }
 
 .form-field__input {
@@ -34,27 +33,37 @@
 }
 
 .form-field__radio-mark {
-  position: absolute;
   width: 30px;
   height: 30px;
-  top: -7px;
-  left: 0;
+  margin-right: 15px;
   border: 1px solid @grey-cd;
   border-radius: 50%;
+
+  @media (min-width: @tablet-width) {
+    width: 40px;
+    height: 40px;
+  }
 }
 
 .form-field__radio:checked + .form-field__radio-mark {
   background-color: @green-basic;
   box-shadow: inset 0 0 0 8px @white;
+
+  @media (min-width: @tablet-width) {
+    box-shadow: inset 0 0 0 11px @white;
+  }
 }
 
 .form-field__check-mark {
-  position: absolute;
   width: 30px;
   height: 30px;
-  top: -7px;
-  left: 0;
+  margin-right: 15px;
   border: 1px solid @grey-cd;
+
+  @media (min-width: @tablet-width) {
+    width: 40px;
+    height: 40px;
+  }
 }
 
 .form-field__checkbox:checked + .form-field__check-mark {
@@ -62,4 +71,8 @@
   background-position: 50% 50%;
   background-size: 18px 14px;
   background-repeat: no-repeat;
+
+  @media (min-width: @tablet-width) {
+    background-size: 24px 19px;
+  }
 }

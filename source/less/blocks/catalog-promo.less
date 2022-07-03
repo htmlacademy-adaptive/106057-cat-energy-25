@@ -1,11 +1,26 @@
 .catalog-promo {
-  margin: 35px 20px;
+  margin-top: 35px;
+  margin-bottom: 35px;
   background-image: url("../img/bg-promo2-mobile.jpg");
-  background-color: @green-basic;
+  background-color: @green-special;
   background-size: 280px 290px;
   background-position: 50% 50%;
   background-repeat: no-repeat;
-  outline: 3px solid #ffbb00;
+
+  @media (min-width: @tablet-width) {
+    text-align: right;
+    background-image: url("../img/bg-promo2-tablet.jpg");
+    background-size: 707px 200px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+    width: 245px;
+    text-align: center;
+    background-image: url("../img/bg-promo2-mobile.jpg");
+    background-size: 280px 290px;
+    background-position: right 0 top 50%;
+  }
 }
 
 .catalog-promo__slogan {
@@ -13,10 +28,28 @@
   margin: 0;
   padding-top: 187px;
   padding-bottom: 43px;
+  padding-left: 55px;
+  padding-right: 55px;
   font-size: 16px;
   line-height: 20px;
   color: @white;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    padding-left: 422px;
+    padding-right: 120px;
+    text-align: left;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 185px;
+    padding-bottom: 42px;
+    padding-left: 40px;
+    padding-right: 40px;
+    text-align: center;
+  }
 }
 
 .catalog-promo__slogan::before {
@@ -27,4 +60,16 @@
   top: 65px;
   left: calc(50% - 39px);
   background-image: url("../img/icons/gift.svg");
+
+  @media (min-width: @tablet-width) {
+    width: 80px;
+    height: 83px;
+    top: calc(50% - 42px);
+    left: 72px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 65px;
+    left: calc(50% - 39px);
+  }
 }

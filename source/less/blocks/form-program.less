@@ -4,20 +4,62 @@
   line-height: 18px;
   text-transform: uppercase;
   background-color: @white;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.form-program__fieldset-container {
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    column-gap: 80px;
+    align-items: center;
+  }
+}
+
+.form-program__submit-container {
+  padding-top: 25px;
+  padding-bottom: 25px;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  @media (min-width: @tablet-width) and (max-width: @desktop-width) {
+    padding: 25px 70px;
+  }
 }
 
 .form-program__button-submit {
-  width: calc(100% - 40px);
+  width: 100%;
   margin: auto;
-  font-size: 16px;
+  margin-bottom: 21px;
+  font-size: @font-size-second;
   line-height: 20px;
   border: none;
+
+  @media (min-width: @tablet-width) {
+    width: 282px;
+    margin: 0;
+    margin-right: 60px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 568px;
+    margin-right: 80px;
+  }
 }
 
 .form-program__note {
   margin: 0;
-  padding-top: 21px;
-  padding-bottom: 32px;
   line-height: 16px;
   text-align: center;
 }
