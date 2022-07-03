@@ -1,4 +1,13 @@
 .catalog-feed {
+  border-top: 1px solid @grey-eb;
+  border-bottom: 1px solid @grey-eb;
+
+  @media (min-width: @tablet-width) {
+    border: none;
+  }
+}
+
+.catalog-feed__container {
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: 324px 324px;

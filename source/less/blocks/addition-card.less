@@ -8,16 +8,16 @@
     grid-template-columns: 1fr 1fr;
     justify-content: space-between;
     padding: 28px 38px;
-    border: 1px solid @grey-cd;
+    border-left: 1px solid @grey-cd;
+    border-right: 1px solid @grey-cd;
   }
 
   @media (min-width: @desktop-width) {
     padding: 15px 0;
-    grid-template-columns: 300px 1fr 1fr;
+    grid-template-columns: 1fr 1fr 245px;
     align-items: center;
-    border: none;
-    border-top: 1px solid @grey-cd;
-    border-bottom: 1px solid @grey-cd;
+    border-left: none;
+    border-right: none;
   }
 }
 
@@ -51,6 +51,12 @@
   @media (min-width: @desktop-width) {
     margin-right: 40px;
     padding-bottom: 0;
+  }
+}
+
+.addition-card__description {
+  @media (min-width: @desktop-width) {
+    text-align: left;
   }
 }
 

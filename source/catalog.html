@@ -14,9 +14,7 @@
           <a class="page-header__logo-image" href="index.html">
             <img src="img/logo-mobile.svg" width="191" height="38" alt="Логотип интернет-магазина Cat Energy">
           </a>
-          <button class="page-header__nav-toggle" type="button">
-            <img src="img/icons/menu-open.png" width="24" height="16" alt="Открыть меню">
-          </button>
+          <button class="page-header__nav-toggle" type="button" aria-label="Открыть меню"></button>
         </div>
 
         <nav class="page-header__nav site-nav">
@@ -43,10 +41,10 @@
         </div>
       </section>
 
-      <div class=" inner-header__container page-container">
-        <section class="catalog-feed">
-          <h2 class="visually-hidden">Содержимое каталога продукции</h2>
+      <section class="catalog-feed">
+        <h2 class="visually-hidden">Содержимое каталога продукции</h2>
 
+        <div class=" catalog-feed__container page-container">
           <article class="catalog-feed__card card-feed">
             <a class="card-feed__link-image" href="#">
               <img class="card-feed__image" src="img/chicken05-mobile.png" width="68" height="86" alt="Cat Energy PRO 500 г">
@@ -229,16 +227,16 @@
             <a class="card-feed__order-button button-base" href="#">заказать</a>
           </article>
 
-          <article class="catalog-feed__card show-more">
+          <div class="catalog-feed__card show-more">
             <div class="show-more__container">
               <a class="show-more__link-image" href="#"></a>
               <h3 class="show-more__title header-title">Показать еще 100500 товаров</h3>
               <p class="show-more__text">На самом деле вкусов гораздо больше!</p>
               <a class="show-more__button button-base button-base--modify" href="#">Показать все</a>
             </div>
-          </article>
-        </section>
-      </div>
+          </div>
+        </div>
+      </section>
 
       <section class="add-goods">
         <div class="add-goods__container-title">
@@ -247,49 +245,49 @@
 
         <div class="add-goods__main-container page-container">
           <div class="add-goods__container">
-            <article class="add-goods__card addition-card">
+            <div class="add-goods__card addition-card">
               <h3 class="addition-card__title header-title">Сахарозаменитель</h3>
               <dl class="addition-card__specification-list">
                 <dt class="addition-card__description">1 упаковка (100 г)</dt>
                 <dd class="addition-card__value">200 Р.</dd>
               </dl>
               <a class="addition-card__order-button button-base" href="#">заказать</a>
-            </article>
+            </div>
 
-            <article class="add-goods__card addition-card">
+            <div class="add-goods__card addition-card">
               <h3 class="addition-card__title header-title">питьевая вода</h3>
               <dl class="addition-card__specification-list">
                 <dt class="addition-card__description">5 литров</dt>
                 <dd class="addition-card__value">50 Р.</dd>
               </dl>
               <a class="addition-card__order-button button-base" href="#">заказать</a>
-            </article>
+            </div>
 
-            <article class="add-goods__card addition-card">
+            <div class="add-goods__card addition-card">
               <h3 class="addition-card__title header-title">молоко</h3>
               <dl class="addition-card__specification-list">
                 <dt class="addition-card__description">1 литр</dt>
                 <dd class="addition-card__value">100 Р.</dd>
               </dl>
               <a class="addition-card__order-button button-base" href="#">заказать</a>
-            </article>
+            </div>
 
-            <article class="add-goods__card addition-card">
+            <div class="add-goods__card addition-card">
               <h3 class="addition-card__title header-title">витамины</h3>
               <dl class="addition-card__specification-list">
                 <dt class="addition-card__description">1 упаковка (30 г)</dt>
                 <dd class="addition-card__value">300 Р.</dd>
               </dl>
               <a class="addition-card__order-button button-base" href="#">заказать</a>
-            </article>
+            </div>
           </div>
 
-          <article class="catalog-promo">
-            <div class="catalog-promo__container">
+          <div class="catalog-promo">
+            <!-- <div class="catalog-promo__container"> -->
               <h2 class="visually-hidden">Подарок при заказе из каталога</h2>
-              <p class="catalog-promo__slogan">Закажите все<br> и получите чехол для<br> кота в подарок!</p>
+              <p class="catalog-promo__slogan">Закажите все<br> и получите чехол для кота в подарок!</p>
+            <!-- </div> -->
             </div>
-          </article>
         </div>
       </section>
 
