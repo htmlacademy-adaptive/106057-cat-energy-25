@@ -1,17 +1,18 @@
 .rewiew {
   padding-top: 25px;
-  padding-bottom: 25px;
+  padding-bottom: 30px;
   background-color: @grey-ea;
 
   @media (min-width: @tablet-width) {
     padding-top: 45px;
     padding-bottom: 0;
-    background: linear-gradient(to bottom, @white, @white 580px, @grey-ea 580px);
+    background: linear-gradient(to bottom, @white, @white 620px, @grey-ea 620px);
     border-top: 1px solid @grey-e6;
   }
 
   @media (min-width: @desktop-width) {
-    background: linear-gradient(to bottom, @white, @white 220px, @grey-f2 220px);
+    padding-top: 0;
+    background: linear-gradient(to bottom, @white, @white 192px, @grey-f2 192px);
     border: none;
   }
 }
@@ -19,16 +20,7 @@
 .rewiew__container {
   @media (min-width: @desktop-width) {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 437px 1fr;
     gap: 190px;
-  }
-}
-
-.rewiew__gallery {
-  padding-top: 15px;
-  text-align: center;
-
-  @media (min-width: @tablet-width) {
-    padding-bottom: 60px;
   }
 }

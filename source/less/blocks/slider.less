@@ -1,10 +1,18 @@
 .slider {
   display: flex;
   justify-content: space-between;
-  padding: 15px 55px;
+  align-items: center;
+  padding: 14px 33px;
 
   @media (min-width: @tablet-width) {
-    padding: 15px 70px;
+    margin-top: 14px;
+    padding: 15px 67px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 583px;
+    margin-top: 4px;
+    padding-left: 9px;
   }
 }
 
@@ -19,5 +27,14 @@
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 30px;
+  }
+}
+
+.slider__range {
+  @media (min-width: @tablet-width) {
+    width: 426px;
+    height: 6px;
+    background-color: @grey-dc;
+    border-radius: 6px;
   }
 }

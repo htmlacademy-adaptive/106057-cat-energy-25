@@ -1,10 +1,17 @@
 .gallery {
-  outline: 3px solid #bb00ff;
+  padding-top: 15px;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 45px;
+    text-align: left;
+  }
 }
 
 .gallery__image {
   @media (min-width: @tablet-width) {
     width: 592px;
     height: 511px;
+    object-position: 35px 0;
   }
 }

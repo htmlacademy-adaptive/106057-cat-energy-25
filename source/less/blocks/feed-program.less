@@ -1,8 +1,3 @@
-.feed-program {
-  padding-top: 20px;
-  outline: 3px solid #bb00ff;
-}
-
 .feed-program__list {
   .list-reset();
 
@@ -13,6 +8,7 @@
 }
 
 .feed-program__item {
+  position: relative;
   margin-bottom: 20px;
   padding-top: 30px;
   padding-bottom: 3px;
@@ -21,26 +17,110 @@
   background-color: @grey-f2;
 
   @media (min-width: @tablet-width) {
-    padding-top: 50px;
-    padding-left: 50px;
+    margin-bottom: 30px;
+    padding-top: 75px;
+    padding-bottom: 40px;
+    padding-left: 53px;
     padding-right: 315px;
   }
 
   @media (min-width: @desktop-width) {
     width: 570px;
-    box-sizing: border-box;
+    padding-top: 77px;
     padding-right: 50px;
+    box-sizing: border-box;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 24px;
+    left: 22px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: @green-basic;
+
+    @media (min-width: @tablet-width) {
+      top: 92px;
+      left: calc(100% - 262px);
+      width: 200px;
+      height: 200px;
+    }
+
+    @media (min-width: @desktop-width) {
+      top: 47px;
+      left: 52px;
+      width: 100px;
+      height: 100px;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 21px;
+    left: 13px;
+    width: 68px;
+    height: 50px;
+    background-repeat: no-repeat;
+
+    @media (min-width: @tablet-width) {
+      top: 80px;
+      left: calc(100% - 295px);
+      width: 268px;
+      height: 194px;
+    }
+
+    @media (min-width: @desktop-width) {
+      top: 41px;
+      left: 33px;
+      width: 134px;
+      height: 97px;
+    }
+  }
+
+  &--slim::after {
+    background-image: url("../img/index-cat-slim.svg");
+    background-size: 36px 50px;
+    background-position: 50% 0;
+
+    @media (min-width: @tablet-width) {
+      background-size: 140px 194px;
+    }
+
+    @media (min-width: @desktop-width) {
+      background-size: 70px 97px;
+      background-position: calc(50% + 3px) 0;
+    }
+  }
+
+  &--pro::after {
+    background-image: url("../img/index-cat-pro.svg");
+    background-size: 67px 28px;
+    background-position: 50% calc(50% + 3px);
+
+    @media (min-width: @tablet-width) {
+      background-size: 268px 112px;
+      background-position: 50% calc(50% + 13px);
+    }
+
+    @media (min-width: @desktop-width) {
+      background-size: 134px 56px;
+      background-position: 50% calc(50% + 5px);
+    }
   }
 }
 
 .feed-program__title {
-  padding-bottom: 25px;
+  padding-bottom: 29px;
   padding-left: 71px;
   font-size: 24px;
   line-height: 37px;
   text-transform: uppercase;
 
   @media (min-width: @tablet-width) {
+    padding-bottom: 25px;
     padding-left: 0;
     font-size: 36px;
     line-height: 36px;
@@ -48,22 +128,32 @@
 
   @media (min-width: @desktop-width) {
     padding-bottom: 75px;
-    padding-left: 215px;
+    padding-left: 162px;
   }
 }
 
 .feed-program__description {
   margin: 0;
-  margin-bottom: 23px;
+  padding-bottom: 22px;
   color: @grey-44;
+  border-bottom: 1px solid @grey-d9;
+
 
   @media (min-width: @tablet-width) {
+    padding-bottom: 32px;
     color: @black;
+    border-bottom: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 7px;
   }
 }
 
 .feed-program__link {
+  position: relative;
   display: block;
+  width: 133px;
   padding: 19px 0;
   font-family: @font-family-second;
   font-size: 16px;
@@ -71,12 +161,37 @@
   color: @font-color-base;
   text-transform: uppercase;
   text-decoration: none;
-  border-top: 1px solid @grey-d9;
 
   @media (min-width: @tablet-width) {
-    padding-bottom: 57px;
     font-size: 20px;
     line-height: 30px;
     border-top: none;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 32px;
+    height: 12px;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    background-image: url("../img/icons/arrow-right.svg");
+    background-size: contain;
+    background-position: left;
+    background-repeat: no-repeat;
+    transition: all 0.1s linear;
+
+    @media (min-width: @tablet-width) {
+      right: -30px;
+    }
+  }
+
+  &:hover::after {
+    background-image: url("../img/icons/arrow-right-long.svg");
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }

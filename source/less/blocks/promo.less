@@ -1,5 +1,6 @@
 .promo {
   padding: 27px 0;
+  padding-bottom: 20px;
   font-family: @font-family-second;
   color: @white;
   text-align: center;
@@ -9,23 +10,25 @@
   background-repeat: no-repeat;
 
   @media (min-width: @tablet-width) {
-    background: none;
+    padding-top: 0;
+    padding-bottom: 0;
     font-size: 20px;
     line-height: 20px;
     color: @black;
     text-align: left;
+    background: none;
   }
 }
 
 .promo__content-container {
   @media (min-width: @tablet-width) {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 87px 1fr;
   }
 
   @media (min-width: @desktop-width) {
-    display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 80px calc(50% - 80px) 50%;
+    padding-left: 0;
   }
 }
 
@@ -35,17 +38,17 @@
   line-height: 36px;
 
   @media (min-width: @tablet-width) {
+    grid-column: ~"2 / -1";
     width: 430px;
-    margin-left: 87px;
-    padding-top: 60px;
-    padding-bottom: 40px;
+    padding-top: 51px;
+    padding-bottom: 43px;
     font-size: 60px;
     line-height: 60px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-left: 80px;
-    padding-top: 114px;
+    grid-row-start: 1;
+    padding-top: 102px;
   }
 }
 
@@ -56,12 +59,9 @@
   margin-bottom: 29px;
 
   @media (min-width: @tablet-width) {
-    margin-left: 87px;
-    margin-bottom: 30px;
-  }
-
-  @media (min-width: @desktop-width) {
-    margin-left: 80px;
+    grid-column: ~"2 / -1";
+    grid-row-start: 2;
+    margin-bottom: 25px;
   }
 }
 
@@ -77,11 +77,13 @@
 
   @media (min-width: @desktop-width) {
     display: block;
-    grid-column: ~"2 / 3";
+    grid-column: ~"3 / 4";
     grid-row: ~"1 / 5";
     width: 552px;
     height: 499px;
-    transform: translateX(-39%);
+    padding-top: 25px;
+    padding-bottom: 50px;
+    transform: translateX(-30%);
     z-index: 1;
   }
 }
@@ -93,16 +95,21 @@
   box-sizing: border-box;
 
   @media (min-width: @tablet-width) {
-    grid-column-start: 1;
+    grid-column: ~"2 / 3";
     grid-row-start: 3;
     width: 244px;
-    margin-top: 20px;
-    margin-left: 87px;
-    padding: 14px 26px;
+    margin-top: 25px;
+    margin-left: 0;
+    padding: 18px 26px;
     font-size: 20px;
   }
 
-  @media (min-width: @desktop-width) {
-    margin-left: 80px;
+  &:hover {
+    background-color: @green-states;
+  }
+
+  &:active {
+    color: fade(@white, 30%);
+    background-color: @green-states;
   }
 }
