@@ -20,6 +20,7 @@
   font-family: @font-family-second;
   font-size: 16px;
   line-height: 20px;
+  color: @black;
   text-transform: uppercase;
   background-color: inherit;
   border: none;
@@ -27,6 +28,18 @@
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 30px;
+
+    &-text {
+      border-bottom: 1px dotted fade(@black, 24%);
+    }
+
+    &:hover &-text {
+      border-bottom: 1px solid fade(@black, 40%);
+    }
+
+    &:active &-text {
+      border-bottom: none;
+    }
   }
 }
 

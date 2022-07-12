@@ -2,6 +2,9 @@
   --content-padding-mobile: 20px;
   --content-padding-tablet: 30px;
   --content-padding-desktop: 110px;
+  --content-width-mobile: (@mobile-width - var(--content-padding-mobile) * 2);
+  --content-width-tablet: (@tablet-width - var(--content-padding-tablet) * 2);
+  --content-width-desktop: (@desktop-width - var(--content-padding-desktop) * 2);
 }
 
 @mobile-width: 320px;
@@ -21,6 +24,7 @@
 @white: #ffffff;
 @black: #000000;
 
+@grey-f7: #f7f7f7;
 @grey-f2: #f2f2f2;
 @grey-eb: #ebebeb;
 @grey-ea: #eaeaea;
@@ -29,6 +33,7 @@
 @grey-dc: #dcdcdc;
 @grey-d9: #d9d9d9;
 @grey-cd: #cdcdcd;
+@grey-ba: #bababa;
 @grey-44: #444444;
 @grey-22: #222222;
 @grey-11: #111111;
@@ -36,6 +41,8 @@
 @green-basic: #68b738;
 @green-special: #64a83b;
 @green-states: #5EAA2F;
+
+@red: #ff8282;
 
 @font-color-base: @black;
 

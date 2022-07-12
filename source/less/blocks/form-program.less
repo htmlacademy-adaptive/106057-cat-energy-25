@@ -11,6 +11,13 @@
   }
 }
 
+.form-program__content-container {
+  @media (min-width: @tablet-width) and (max-width: @desktop-width) {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+}
+
 .form-program__fieldset-container {
   @media (min-width: @desktop-width) {
     display: grid;
@@ -18,28 +25,31 @@
     grid-template-rows: auto;
     column-gap: 80px;
     align-items: center;
+    margin-top: 27px;
+    margin-bottom: 68px;
   }
 }
 
 .form-program__submit-container {
-  padding-top: 25px;
-  padding-bottom: 25px;
+  margin-top: 33px;
+  margin-bottom: 32px;
 
   @media (min-width: @tablet-width) {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    margin-bottom: 72px;
   }
 
-  @media (min-width: @tablet-width) and (max-width: @desktop-width) {
-    padding: 25px 70px;
+  @media (min-width: @desktop-width) {
+    margin-bottom: 75px;
   }
 }
 
 .form-program__button-submit {
   width: 100%;
   margin: auto;
-  margin-bottom: 21px;
+  margin-bottom: 19px;
   font-size: @font-size-second;
   line-height: 20px;
   border: none;

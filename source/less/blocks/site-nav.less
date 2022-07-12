@@ -15,7 +15,6 @@
 
   @media (min-width: @tablet-width) {
     display: flex;
-    justify-content: flex-end;
     flex-wrap: wrap;
     border-top: none;
   }
@@ -63,6 +62,10 @@
     left: 0;
     z-index: 2;
     background-color: @white;
+  }
+
+  .site-nav--opened .site-nav__list--inner {
+    background-color: #f7f7f7;
   }
 
   .site-nav--nojs .site-nav__list {
@@ -137,10 +140,14 @@
   @media (min-width: @desktop-width) {
     color: @white;
   }
-}
 
-.site-nav__link--inner {
-  @media (min-width: @desktop-width) {
-    color: @grey-11;
+  &--inner {
+    @media (min-width: @desktop-width) {
+      color: @grey-11;
+    }
+  }
+
+  &--inner&--active::after {
+    background-color: @green-basic;
   }
 }
