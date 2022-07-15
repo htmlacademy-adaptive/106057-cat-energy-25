@@ -8,9 +8,27 @@
   text-decoration: none;
   background-color: @green-basic;
   cursor: pointer;
+
+  &:hover {
+    background-color: @green-states;
+  }
+
+  &:active {
+    color: fade(@white, 30%);
+    background-color: @green-states;
+  }
 }
 
 .button-base--modify {
   color: @grey-44;
   background-color: @grey-f2;
+
+  &:hover {
+    background-color: @grey-eb;
+  }
+
+  &:active {
+    color: fade(@grey-44, 30%);
+    background-color: @grey-eb;
+  }
 }

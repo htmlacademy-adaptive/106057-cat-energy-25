@@ -1,21 +1,32 @@
 .addition-card {
-  padding-top: 13px;
-  padding-bottom: 19px;
+  padding-top: 14px;
+  padding-bottom: 17px;
   border-bottom: 1px solid @grey-cd;
+
+  &:first-child {
+    border-top: 1px solid @grey-cd;
+  }
 
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-content: space-between;
-    padding: 28px 38px;
+    align-items: baseline;
+    padding-top: 26px;
+    padding-bottom: 29px;
+    padding-left: 38px;
+    padding-right: 38px;
     border-left: 1px solid @grey-cd;
     border-right: 1px solid @grey-cd;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 15px 0;
+    padding-top: 16px;
+    padding-bottom: 15px;
+    padding-left: 0;
+    padding-right: 0;
     grid-template-columns: 1fr 1fr 245px;
-    align-items: center;
+    align-items: baseline;
     border-left: none;
     border-right: none;
   }
@@ -29,8 +40,13 @@
   text-transform: uppercase;
 
   @media (min-width: @tablet-width) {
+    padding-bottom: 23px;
     font-size: 20px;
     line-height: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 0;
   }
 }
 
@@ -42,7 +58,8 @@
   color: @grey-44;
 
   @media (min-width: @tablet-width) {
-    grid-template-columns: 1fr 95px;
+    grid-template-columns: 1fr 93px;
+    padding-bottom: 13px;
     font-size: @font-size-second;
     line-height: 20px;
     text-align: right;
@@ -68,6 +85,8 @@
 .addition-card__order-button {
   font-size: @font-size-second;
   line-height: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 
   @media (min-width: @tablet-width) {
     grid-column: ~"1 / -1";

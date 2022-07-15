@@ -16,10 +16,20 @@
 .inner-header--catalog {
   margin: 0;
   padding-bottom: 41px;
+  border-bottom: 1px solid @grey-eb;
 
   @media (min-width: @tablet-width) and (max-width: @desktop-width) {
+    padding-top: 50px;
+    padding-bottom: 105px;
     padding-left: 0;
     padding-right: 0;
+    border-bottom: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 67px;
+    padding-bottom: 107px;
+    border-bottom: none;
   }
 }
 
