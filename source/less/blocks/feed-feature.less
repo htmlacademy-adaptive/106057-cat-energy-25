@@ -9,7 +9,7 @@
 
   @media (min-width: @desktop-width) {
     padding-top: 42px;
-    padding-bottom: 35px;
+    padding-bottom: 10px;
   }
 }
 
@@ -27,18 +27,20 @@
 
 .feed-feature__list {
   .list-reset();
+  counter-reset: feature;
 
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
-    gap: 97px 67px;
+    gap: 96px 60px;
   }
 
   @media (min-width: @desktop-width) {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto;
+    column-gap: 77px;
   }
 }
 
@@ -101,36 +103,26 @@
     background-size: 32px 33px;
   }
 
-  &::after {
-    position: absolute;
-    content: "";
-    width: 134px;
-    height: 280px;
-    top: -40px;
-    right: 0;
-    font-family: @font-family-second;
-    font-size: 280px;
-    line-height: 280px;
-    text-align: center;
-    color: @grey-f2;
-    z-index: -1;
-  }
+  @media (min-width: @tablet-width) {
+    &::after {
+      position: absolute;
+      content: counter(feature);
+      counter-increment: feature;
+      width: 134px;
+      height: 280px;
+      top: -40px;
+      right: 0;
+      font-family: @font-family-second;
+      font-size: 280px;
+      line-height: 280px;
+      text-align: center;
+      color: @grey-f2;
+      z-index: -1;
+    }
 
-  &--first::after {
-    content: "1";
-    right: 5px;
-  }
-
-  &--second::after {
-    content: "2";
-  }
-
-  &--third::after {
-    content: "3";
-  }
-
-  &--fourth::after {
-    content: "4";
+    &--first::after {
+      right: 5px;
+    }
   }
 }
 

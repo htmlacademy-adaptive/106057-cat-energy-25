@@ -114,16 +114,22 @@
             </div>
           </div>
 
-          <div class="rewiew__gallery gallery">
-            <img class="gallery__image" src="img/content/cat-porky-mobile.png" width="280" height="232" alt="Толстый кот до начала фитнес-питания.">
-            <img class="gallery__image visually-hidden" src="img/content/cat-skinny-mobile.png" width="280" height="267" alt="Худой кот после программы фитнес-питания.">
-            <div class="gallery__slider slider">
-              <button class="slider__toggle" type="button">
-                <span class="slider__toggle-text">было</span>
+          <div class="rewiew__slider slider">
+            <div class="slider__images">
+              <div class="slider__image-container slider__image-container--before">
+                <img class="slider__image slider__image--before" src="img/content/cat-porky-mobile.png" width="280" height="232" alt="Толстый кот до начала фитнес-питания.">
+              </div>
+              <div class="slider__image-container slider__image-container--after">
+                <img class="slider__image slider__image--after" src="img/content/cat-skinny-mobile.png" width="auto" height="232" alt="Худой кот после программы фитнес-питания.">
+              </div>
+            </div>
+            <div class="slider__controls">
+              <button class="slider__button" type="button">
+                <span class="slider__button-text">Было</span>
               </button>
-              <div class="slider__range"></div>
-              <button class="slider__toggle" type="button">
-                <span class="slider__toggle-text">стало</span>
+              <input class="slider__range" type="range" min="0" max="100" aria-label="Сравнить">
+              <button class="slider__button" type="button">
+                <span class="slider__button-text">Стало</span>
               </button>
             </div>
           </div>
