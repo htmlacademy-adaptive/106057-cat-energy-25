@@ -1,5 +1,11 @@
 .reference {
+  padding-bottom: 32px;
   background-color: @grey-f2;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
 }
 
 .reference__container {
@@ -8,24 +14,28 @@
   @media (min-width: @tablet-width) {
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
 }
 
 .reference__logo-name {
   display: block;
   padding-top: 39px;
-  padding-bottom: 32px;
+  padding-bottom: 27px;
   border-bottom: 1px solid @grey-d9;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 25px;
+    padding-bottom: 15px;
+    border-bottom: none;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
-.reference__social {
-  padding-top: 22px;
-  padding-bottom: 22px;
-  border-bottom: 1px solid @grey-d9;
-}
-
-.reference__copyright {
-  padding-top: 28px;
-  padding-bottom: 32px;
-  text-decoration: none;
-}

@@ -1,15 +1,34 @@
 .button-base {
   display: block;
-  padding: 10px 44px;
+  padding: 11px 44px;
   font-family: @font-family-second;
   color: @white;
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
   background-color: @green-basic;
+  cursor: pointer;
+
+  &:hover {
+    background-color: @green-states;
+  }
+
+  &:active {
+    color: fade(@white, 30%);
+    background-color: @green-states;
+  }
 }
 
 .button-base--modify {
   color: @grey-44;
   background-color: @grey-f2;
+
+  &:hover {
+    background-color: @grey-eb;
+  }
+
+  &:active {
+    color: fade(@grey-44, 30%);
+    background-color: @grey-eb;
+  }
 }

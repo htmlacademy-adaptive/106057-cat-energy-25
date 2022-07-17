@@ -1,7 +1,4 @@
 .catalog-feed {
-  border-top: 1px solid @grey-eb;
-  border-bottom: 1px solid @grey-eb;
-
   @media (min-width: @tablet-width) {
     border: none;
   }
@@ -11,16 +8,14 @@
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: 324px 324px;
-    gap: 60px;
+    column-gap: 60px;
+    row-gap: 87px;
     justify-content: center;
   }
 
   @media (min-width: @desktop-width) {
     grid-template-columns: repeat(4, 245px);
-    gap: 80px;
+    column-gap: 80px;
+    row-gap: 85px;
   }
-}
-
-.catalog-feed__card {
-  outline: 2px solid #ffbb00;
 }

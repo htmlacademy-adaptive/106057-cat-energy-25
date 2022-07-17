@@ -1,21 +1,36 @@
 .show-more {
-  padding-bottom: 25px;
+  margin-left: calc(var(--content-padding-mobile) * -1);
+  margin-right: calc(var(--content-padding-mobile) * -1);
+  padding-left: var(--content-padding-mobile);
+  padding-right: var(--content-padding-mobile);
+  padding-bottom: 24px;
   border-bottom: 1px solid @grey-eb;
 
   @media (min-width: @tablet-width) {
-    padding-top: 86px;
+    margin-left: 0;
+    margin-right: 0;
+    padding-top: 11px;
     padding-bottom: 0;
-    border: 1px solid @grey-f2;
+    padding-left: 0;
+    padding-right: 0;
+    border-bottom: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 10px;
   }
 }
 
 .show-more__container {
   @media (min-width: @tablet-width) {
     min-height: 430px;
-    padding: 0 40px;
-    padding-bottom: 40px;
+    margin-top: 45px;
+    padding-top: 30px;
+    padding-bottom: 32px;
+    padding-left: 37px;
+    padding-right: 37px;
     box-sizing: border-box;
-    outline: 2px solid #99eebb;
+    border: 2px solid @grey-f2;
   }
 }
 
@@ -30,14 +45,21 @@
   background-repeat: no-repeat;
 
   @media (min-width: @tablet-width) {
-    padding-bottom: 62px;
+    margin-bottom: 50px;
     background-image: url("../img/icons/plus-tablet.svg");
     background-size: 60px 60px;
-    background-position: top 43px left 50%;
+    background-position: top 20px left 50%;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 50px;
+    background-position: top 19px left 50%;
   }
 }
 
 .show-more__title {
+  margin-left: 35px;
+  margin-right: 35px;
   padding-bottom: 8px;
   font-size: 16px;
   line-height: 20px;
@@ -46,9 +68,16 @@
   text-transform: uppercase;
 
   @media (min-width: @tablet-width) {
-    padding-bottom: 37px;
+    padding-bottom: 25px;
     font-size: 20px;
-    line-height: 24px;
+    line-height: 22px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 0;
+    margin-right: 0;
+    padding-bottom: 24px;
+    line-height: 22px;
   }
 }
 
@@ -61,10 +90,15 @@
   text-align: center;
 
   @media (min-width: @tablet-width) {
-    width: 170px;
-    margin: 0 auto;
-    padding-bottom: 92px;
+    margin: 0 35px;
+    margin-bottom: 62px;
     font-size: @font-size-second;
+    line-height: 18px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 
