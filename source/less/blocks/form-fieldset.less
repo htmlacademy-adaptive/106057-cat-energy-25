@@ -99,58 +99,14 @@
 }
 
 .form-fieldset__title {
-  position: relative;
   max-width: 190px;
-  margin-left: -9px;
   margin-bottom: 35px;
-  padding-left: 9px;
-  font-size: 24px;
   line-height: 26px;
-  text-transform: none;
-  z-index: 0;
 
   @media (min-width: @tablet-width) {
     max-width: none;
     margin-bottom: 47px;
-    font-size: 36px;
     line-height: 36px;
-  }
-
-  &::before {
-    position: absolute;
-    content: "";
-    top: 50%;
-    left: -20px;
-    right: -20px;
-    height: 110%;
-    transform: translateY(-50%);
-    background-color: @white;
-    z-index: -1;
-
-    @media (min-width: @tablet-width) {
-      left: -40px;
-      right: -40px;
-    }
-  }
-
-  &::after {
-    position: absolute;
-    content: "";
-    top: 0.67em;
-    left: ~"calc((50vw - var(--content-width-mobile) / 2) * -1)";
-    width: 100vw;
-    height: 2px;
-    transform: translateY(-50%);
-    background-color: @green-basic;
-    z-index: -2;
-
-    @media (min-width: @tablet-width) {
-      left: ~"calc((50vw - var(--content-width-tablet) / 2) * -1 - 40px)";
-    }
-
-    @media (min-width: @desktop-width) {
-      left: ~"calc((50vw - var(--content-width-desktop) / 2) * -1)";
-    }
   }
 }
 

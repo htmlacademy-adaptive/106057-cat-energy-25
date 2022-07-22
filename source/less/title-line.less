@@ -1,0 +1,79 @@
+.title-line {
+  position: relative;
+  display: inline-block;
+  margin-left: -10px;
+  padding-left: 10px;
+  font-size: 24px;
+  text-transform: none;
+
+  @media (min-width: @tablet-width) {
+    font-size: 36px;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: -10px;
+    right: -20px;
+    height: 110%;
+    transform: translateY(-50%);
+    background-color: @white;
+    z-index: -1;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 0.67em;
+    left: ~"calc((50vw - var(--content-width-mobile) / 2) * -1)";
+    width: 100vw;
+    height: 2px;
+    transform: translateY(-50%);
+    background-color: @green-basic;
+    z-index: -2;
+
+    @media (min-width: @tablet-width) {
+      left: ~"calc((50vw - var(--content-width-tablet) / 2) * -1 - 40px)";
+    }
+
+    @media (min-width: @desktop-width) {
+      left: ~"calc((50vw - var(--content-width-desktop) / 2) * -1)";
+    }
+  }
+}
+
+.title-line--form {
+  z-index: 0;
+
+  &::before {
+    @media (min-width: @tablet-width) {
+      left: -30px;
+      right: -40px;
+    }
+  }
+}
+
+.title-line--catalog {
+  @media (min-width: @tablet-width) {
+    margin-left: 27px;
+    padding-left: 10px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: -11px;
+    padding-left: 11px;
+  }
+
+  &::before {
+    @media (min-width: @tablet-width) {
+      left: -27px;
+      right: -37px;
+    }
+
+    @media (min-width: @desktop-width) {
+      left: -29px;
+      right: -35px;
+    }
+  }
+}

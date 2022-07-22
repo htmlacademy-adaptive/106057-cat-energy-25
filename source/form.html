@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>HTML Academy: Кэт энерджи</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="images/favicons/16.svg" type="image/svg+xml">
+    <link rel="icon" href="images/favicons/32.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="images/favicons/apple-icon-180x180.png">
   </head>
 
   <body class="page-body">
@@ -13,7 +17,11 @@
       <div class="page-header__container page-container">
         <div class="page-header__logo-container">
           <a class="page-header__logo-image" href="index.html">
-            <img src="img/logo-mobile.svg" width="191" height="38" alt="Логотип интернет-магазина Cat Energy">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg">
+              <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+              <img src="img/logo-mobile.svg" width="191" height="38" alt="Логотип интернет-магазина Cat Energy">
+            </picture>
           </a>
           <button class="page-header__nav-toggle page-header__nav-toggle--closed page-header__nav-toggle--nojs" type="button" aria-label="Открыть меню"></button>
         </div>
@@ -37,7 +45,7 @@
     <main class="page-main">
 
       <section class="inner-header page-container">
-        <h1 class="inner-header__title header-title" >Подбор программы</h1>
+        <h1 class="inner-header__title header-title">Подбор программы</h1>
         <p class="inner-header__text">Заполните анкету, и мы подберем<br> программу питания для вашего кота</p>
       </section>
 
@@ -91,7 +99,7 @@
           </div>
 
           <fieldset class="form-program__fieldset form-fieldset">
-            <legend class="form-fieldset__title">Контактные данные (владельца кота)</legend>
+            <legend class="form-fieldset__title title-line title-line--form">Контактные данные (владельца кота)</legend>
 
             <div class="form-fieldset__container form-fieldset__container--input form-fieldset__container--input-contacts">
               <label class="form-fieldset__field form-field">
@@ -106,7 +114,7 @@
           </fieldset>
 
           <fieldset class="form-program__fieldset form-fieldset">
-            <legend class="form-fieldset__title">Комментарий</legend>
+            <legend class="form-fieldset__title title-line title-line--form">Комментарий</legend>
 
             <div class="form-fieldset__container form-fieldset__container--comment">
               <label class="form-fieldset__field form-field">
@@ -116,7 +124,7 @@
           </fieldset>
 
           <fieldset class="form-program__fieldset form-fieldset">
-            <legend class="form-fieldset__title">Дополнительно</legend>
+            <legend class="form-fieldset__title title-line title-line--form">Дополнительно</legend>
 
             <div class="form-fieldset__container form-fieldset__container--checkbox">
               <ul class="form-fieldset__list form-fieldset__list--checkbox">
@@ -171,7 +179,7 @@
       </section>
 
       <div class="page-footer__map map">
-        <img class="map__image" src="img/map-mobile.png" width="320" height="362" alt="Cat Energy на карте.">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6026570763552!2d30.321738470254086!3d59.9387352341448!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sro!4v1658442618886!5m2!1sru!2sro" width="100%" height="100%" style="border: 0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Cat Energy на карте."></iframe>
       </div>
 
       <section class="page-footer__reference reference">

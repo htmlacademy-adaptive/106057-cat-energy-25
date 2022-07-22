@@ -21,8 +21,6 @@
   width: 280px;
   display: grid;
   grid-template-columns: 1fr;
-  grid-column: ~"1 / -1";
-  grid-row: ~"1 / -1";
   margin-bottom: 18px;
 
   @media (min-width: @tablet-width) {
@@ -35,14 +33,13 @@
   }
 }
 
-.slider_image-container {
+.slider__image-container {
   overflow: hidden;
   grid-column: ~"1 / -1";
   grid-row: ~"1 / -1";
 }
 
 .slider__image-container--before {
-  position: absolute;
   width: 50%;
   background-color: @grey-ea;
   overflow: hidden;
@@ -82,7 +79,8 @@
 }
 
 .slider__controls {
-  text-align: center;
+  display: flex;
+  align-items: center;
 }
 
 .slider__button {
@@ -114,10 +112,11 @@
 }
 
 .slider__range {
+  position: relative;
   width: 86px;
   height: 14px;
-  margin-left: 8px;
-  margin-right: 8px;
+  margin-left: 13px;
+  margin-right: 13px;
   background-color: @white;
   border: 1px solid @grey-cd;
   border-radius: 6px;
@@ -130,6 +129,36 @@
     margin-right: 15px;
     background-color: @grey-dc;
     border: none;
-    border-radius: none;
+    border-radius: 6px;
+  }
+}
+
+.slider__thumb {
+  position: absolute;
+  width: 36px;
+  height: 6px;
+  left: 6px;
+  transform: translateY(50%);
+  background-color: @green-basic;
+  border: none;
+  border-radius: 6px;
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    width: 34px;
+    height: 34px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid @grey-cd;
+    border-radius: 50%;
+    box-shadow: inset 0 0 0 13px @white, 0 1px 2px 3px fade(@grey-cd, 30%);
+
+    &:hover {
+      box-shadow: inset 0 0 0 13px @white, 0 2px 3px 3px fade(@grey-cd, 50%);
+    }
+
+    &:active {
+      border-color: @green-basic;
+    }
   }
 }
