@@ -21,15 +21,15 @@
   width: 280px;
   display: grid;
   grid-template-columns: 1fr;
-  margin-bottom: 18px;
+  margin-bottom: 19px;
 
   @media (min-width: @tablet-width) {
     width: 592px;
-    margin-bottom: 37px;
+    margin-bottom: 36px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 22px;
+    margin-bottom: 45px;
   }
 }
 
@@ -50,7 +50,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    background: linear-gradient(to bottom, @white, @white 172px, @grey-f2 172px);
+    background: linear-gradient(to bottom, @white, @white 192px, @grey-f2 192px);
   }
 }
 
@@ -80,7 +80,13 @@
 
 .slider__controls {
   display: flex;
+  justify-content: center;
   align-items: center;
+  margin-left: 7px;
+
+  @media (min-width: @desktop-width) {
+    margin-left: -5px;
+  }
 }
 
 .slider__button {
@@ -125,8 +131,8 @@
   @media (min-width: @tablet-width) {
     width: 426px;
     height: 6px;
-    margin-left: 15px;
-    margin-right: 15px;
+    margin-left: 24px;
+    margin-right: 20px;
     background-color: @grey-dc;
     border: none;
     border-radius: 6px;
@@ -151,7 +157,7 @@
     transform: translate(-50%, -50%);
     border: 1px solid @grey-cd;
     border-radius: 50%;
-    box-shadow: inset 0 0 0 13px @white, 0 1px 2px 3px fade(@grey-cd, 30%);
+    box-shadow: inset 0 0 0 12px @white, 0 1px 2px 3px fade(@grey-cd, 30%);
 
     &:hover {
       box-shadow: inset 0 0 0 13px @white, 0 2px 3px 3px fade(@grey-cd, 50%);
