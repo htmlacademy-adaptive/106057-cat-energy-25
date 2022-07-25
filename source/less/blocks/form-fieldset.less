@@ -7,7 +7,7 @@
 .form-fieldset__container--input {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 15px;
+  gap: 14px;
   margin-bottom: 24px;
 
   @media (min-width: @tablet-width) {
@@ -16,6 +16,7 @@
   }
 
   @media (min-width: @desktop-width) {
+    gap: 15px;
     margin-top: 0;
     margin-bottom: 0;
   }
@@ -56,7 +57,7 @@
 
 .form-fieldset__container--input-contacts {
   @media (min-width: @tablet-width) {
-    margin-top: 27px;
+    margin-top: 25px;
     margin-bottom: 64px;
   }
 
@@ -67,7 +68,7 @@
 }
 
 .form-fieldset__container--comment {
-  margin-top: 2px;
+  margin-top: 6px;
   margin-bottom: 23px;
 
   @media (min-width: @tablet-width) {
@@ -81,7 +82,7 @@
 }
 
 .form-fieldset__container--checkbox {
-  margin-top: -2px;
+  margin-top: 2px;
 
   @media (min-width: @tablet-width) {
     margin-top: 10px;
@@ -99,58 +100,14 @@
 }
 
 .form-fieldset__title {
-  position: relative;
   max-width: 190px;
-  margin-left: -9px;
-  margin-bottom: 35px;
-  padding-left: 9px;
-  font-size: 24px;
+  margin-bottom: 32px;
   line-height: 26px;
-  text-transform: none;
-  z-index: 0;
 
   @media (min-width: @tablet-width) {
     max-width: none;
     margin-bottom: 47px;
-    font-size: 36px;
     line-height: 36px;
-  }
-
-  &::before {
-    position: absolute;
-    content: "";
-    top: 50%;
-    left: -20px;
-    right: -20px;
-    height: 110%;
-    transform: translateY(-50%);
-    background-color: @white;
-    z-index: -1;
-
-    @media (min-width: @tablet-width) {
-      left: -40px;
-      right: -40px;
-    }
-  }
-
-  &::after {
-    position: absolute;
-    content: "";
-    top: 0.67em;
-    left: ~"calc((50vw - var(--content-width-mobile) / 2) * -1)";
-    width: 100vw;
-    height: 2px;
-    transform: translateY(-50%);
-    background-color: @green-basic;
-    z-index: -2;
-
-    @media (min-width: @tablet-width) {
-      left: ~"calc((50vw - var(--content-width-tablet) / 2) * -1 - 40px)";
-    }
-
-    @media (min-width: @desktop-width) {
-      left: ~"calc((50vw - var(--content-width-desktop) / 2) * -1)";
-    }
   }
 }
 
@@ -164,6 +121,11 @@
     padding: 23px 27px;
     border: 1px solid @grey-e7;
     box-sizing: border-box;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 25px;
+    padding-left: 25px;
   }
 }
 

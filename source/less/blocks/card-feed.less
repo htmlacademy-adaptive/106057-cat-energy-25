@@ -11,7 +11,7 @@
 
   @media (min-width: @tablet-width) {
     grid-template-columns: 1fr;
-    grid-template-rows: 200px 1fr min-content;
+    grid-template-rows: 230px 1fr min-content;
     margin-left: 0;
     margin-right: 0;
     padding-top: 0;
@@ -32,10 +32,21 @@
 
 .card-feed__link-image {
   display: flex;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-around;
   align-items: center;
   padding-top: 10px;
   overflow: hidden;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 0;
+  }
+}
+
+.card-feed__image {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .card-feed__container-text {

@@ -4,10 +4,14 @@
   font-family: @font-family-second;
   color: @white;
   text-align: center;
-  background-image: url("../img/bg-promo-mobile.jpg"), linear-gradient(to bottom, @green-special 302px, transparent 302px);
-  background-size: image-size("../img/bg-promo-mobile.jpg"), 100%;
+  background-image: url("../img/index-bg-mobile@1x.jpg"), linear-gradient(to bottom, @green-special 302px, transparent 302px);
+  background-size: image-size("../img/index-bg-mobile@1x.jpg"), 100%;
   background-position: top center;
   background-repeat: no-repeat;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/index-bg-mobile@2x.jpg"), linear-gradient(to bottom, @green-special 302px, transparent 302px);
+  }
 
   @media (min-width: @tablet-width) {
     padding-top: 0;
@@ -40,7 +44,7 @@
   @media (min-width: @tablet-width) {
     grid-column: ~"2 / -1";
     width: 430px;
-    padding-top: 49px;
+    padding-top: 44px;
     padding-bottom: 45px;
     font-size: 60px;
     line-height: 60px;
@@ -48,7 +52,8 @@
 
   @media (min-width: @desktop-width) {
     grid-row-start: 1;
-    padding-top: 102px;
+    padding-top: 95px;
+    padding-bottom: 43px;
   }
 }
 
@@ -61,17 +66,15 @@
   @media (min-width: @tablet-width) {
     grid-column: ~"2 / -1";
     grid-row-start: 2;
-    margin-bottom: 25px;
+    margin-bottom: 23px;
   }
 }
 
-.promo__image {
+.promo__picture {
   @media (min-width: @tablet-width) {
     grid-column: ~"1 / -1";
     grid-row: ~"3 / 5";
     margin: 0 auto;
-    width: 709px;
-    height: 609px;
     z-index: -1;
   }
 
@@ -79,12 +82,22 @@
     display: block;
     grid-column: ~"3 / 4";
     grid-row: ~"1 / 5";
+    padding-top: 14px;
+    padding-bottom: 50px;
+    transform: translateX(-34.3%);
+    z-index: 1;
+  }
+}
+
+.promo__image {
+  @media (min-width: @tablet-width) {
+    width: 709px;
+    height: 609px;
+  }
+
+  @media (min-width: @desktop-width) {
     width: 552px;
     height: 499px;
-    padding-top: 25px;
-    padding-bottom: 50px;
-    transform: translateX(-30%);
-    z-index: 1;
   }
 }
 
@@ -98,9 +111,13 @@
     grid-column: ~"2 / 3";
     grid-row-start: 3;
     width: 244px;
-    margin-top: 27px;
+    margin-top: 26px;
     margin-left: 0;
     padding: 18px 26px;
     font-size: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 30px;
   }
 }

@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>HTML Academy: Кэт энерджи</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/32.png">
+    <link rel="icon" type="image/svg+xml" href="img/favicons/16.svg">
+    <link rel="icon" type="image/svg+xml" href="img/favicons/32.svg">
+    <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="img/favicons/apple-icon-180x180.png">
   </head>
 
   <body class="page-body">
@@ -12,7 +18,11 @@
       <div class="page-header__container page-container">
         <div class="page-header__logo-container">
           <a class="page-header__logo-image">
-            <img src="img/logo-mobile.svg" width="191" height="38" alt="Логотип интернет-магазина Cat Energy">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg">
+              <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+              <img src="img/logo-mobile.svg" width="191" height="38" alt="Логотип интернет-магазина Cat Energy">
+            </picture>
           </a>
           <button class="page-header__nav-toggle page-header__nav-toggle--closed page-header__nav-toggle--nojs" type="button" aria-label="Открыть меню"></button>
         </div>
@@ -38,7 +48,24 @@
             <h2 class="promo__title header-title">Функциональное питание для котов</h2>
 
             <p class="promo__slogan">Занялся собой? Займись котом!</p>
-            <img class="promo__image" src="img/content/promo-mobile.png" width="280" height="270" alt="Фитнес-корм для котов">
+            <div class="promo__picture">
+              <picture>
+                <source type="image/webp" media="(min-width: 1440px)"
+                  srcset="img/content/index-promo-desktop@1x.webp 1x, img/content/index-promo-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="img/content/index-promo-tablet@1x.webp 1x, img/content/index-promo-tablet@2x.webp 2x">
+                <source type="image/webp"
+                  srcset="img/content/index-promo-mobile@1x.webp 1x, img/content/index-promo-mobile@2x.webp 2x">
+
+                <source media="(min-width: 1440px)"
+                  srcset="img/content/index-promo-desktop@1x.png 1x, img/content/index-promo-desktop@2x.png 2x">
+                <source media="(min-width: 768px)" s
+                  rcset="img/content/index-promo-tablet@1x.png 1x, img/content/index-promo-tablet@2x.png 2x">
+                <img class="promo__image" src="img/content/index-promo-mobile@1x.png"
+                  srcset="img/content/index-promo-mobile@1x.png 1x, img/content/index-promo-mobile@2x.png 2x"
+                  width="280" height="270" alt="Фитнес-корм для котов">
+              </picture>
+            </div>
             <a class="promo__program-choose button-base" href="form.html">подобрать программу</a>
           </div>
         </div>
@@ -117,17 +144,37 @@
           <div class="rewiew__slider slider">
             <div class="slider__images">
               <div class="slider__image-container slider__image-container--before">
-                <img class="slider__image slider__image--before" src="img/content/cat-porky-mobile.png" width="280" height="232" alt="Толстый кот до начала фитнес-питания.">
+                <picture>
+                  <source media="(min-width: 1440px)"
+                    srcset="img/content/cat-porky-tablet@1x.png 1x, img/content/cat-porky-tablet@2x.png 2x">
+                  <source media="(min-width: 768px)"
+                    srcset="img/content/cat-porky-tablet@1x.png 1x, img/content/cat-porky-tablet@2x.png 2x">
+                  <img class="slider__image slider__image--before" src="img/content/cat-porky-mobile@1x.png"
+                    srcset="img/content/cat-porky-mobile@1x.png 1x, img/content/cat-porky-mobile@2x.png 2x"
+                    width="280" height="232" alt="Толстый кот до начала фитнес-питания.">
+                </picture>
               </div>
               <div class="slider__image-container slider__image-container--after">
-                <img class="slider__image slider__image--after" src="img/content/cat-skinny-mobile.png" width="auto" height="232" alt="Худой кот после программы фитнес-питания.">
+                <picture>
+                  <source media="(min-width: 1440px)"
+                    srcset="img/content/cat-skinny-tablet@1x.png 1x, img/content/cat-skinny-tablet@2x.png 2x">
+                  <source media="(min-width: 768px)"
+                    srcset="img/content/cat-skinny-tablet@1x.png 1x, img/content/cat-skinny-tablet@2x.png 2x">
+                  <img class="slider__image slider__image--after" src="img/content/cat-skinny-tablet@1x.png"
+                    srcset="img/content/cat-skinny-tablet@1x.png 1x, img/content/cat-skinny-tablet@2x.png 2x"
+                    width="243" height="232" alt="Худой кот после программы фитнес-питания.">
+                </picture>
               </div>
             </div>
             <div class="slider__controls">
               <button class="slider__button" type="button">
                 <span class="slider__button-text">Было</span>
               </button>
-              <input class="slider__range" type="range" min="0" max="100" aria-label="Сравнить">
+              <div class="slider__range">
+                <button class="slider__thumb" type="button">
+                  <span class="visually-hidden">Сравнить</span>
+                </button>
+              </div>
               <button class="slider__button" type="button">
                 <span class="slider__button-text">Стало</span>
               </button>
@@ -148,14 +195,14 @@
       </section>
 
       <div class="page-footer__map map">
-        <img class="map__image" src="img/map-mobile.png" width="320" height="362" alt="Cat Energy на карте.">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6026570763552!2d30.321738470254086!3d59.9387352341448!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sro!4v1658442618886!5m2!1sru!2sro" style="border: 0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Cat Energy на карте."></iframe>
       </div>
 
       <section class="page-footer__reference reference">
         <h2 class="visually-hidden">Ссылки на соцсети и сайт разработчика.</h2>
          <div class="reference__container page-container">
           <a class="reference__logo-name">
-            <img src="img/logo-name.svg" width="128" height="24" alt="Cat Energy">
+            <img src="img/logo-name.svg" width="128" height="24" alt="Логотип Cat Energy">
           </a>
 
           <ul class="reference__social social">
@@ -178,8 +225,8 @@
 
           <a class="reference__copyright copyright" href="https://htmlacademy.ru/intensive/adaptive">
             <span class="copyright__text">HTML Academy</span>
-            <svg class="copyright__image" width="27" height="34" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Логотип HTML Academy">
-              <path d="M13.643.016 13.5 0 0 1.407v24.606L13.5 34 27 26.013V1.407L13.643.016Zm11.591 25L13.5 31.956 1.766 25.015V14.93l11.685 6.916.02 1.253-8.017-4.743-.011 1.225 8.046 4.809.02 1.286-8.045-4.758-.01 1.226L13.5 26.95l8.124-4.833V16.91l3.62-2.15-.01 10.256Zm0-11.564-3.22 1.88-1.482.875-7.065-4.187-.011 1.225 6.04 3.573-.053.031-.13.076-.86.492-4.986-2.948-.011 1.225 3.936 2.328-.933.61-.021.012-2.971-1.742-.011 1.225 1.947 1.135-1.988 1.186-11.618-6.872 11.638-6.958 11.8 6.834Zm0-1.225L13.44 5.31 1.766 12.22V2.99L13.5 1.764 25.234 2.99v9.237Z" fill="#666"/>
+            <svg class="copyright__image" width="27" height="34" aria-label="Логотип HTML Academy">
+              <use xlink:href="img/sprite.svg#logo-htmlacademy"></use>
             </svg>
           </a>
         </div>
