@@ -1,6 +1,6 @@
 import autoprefixer from 'autoprefixer';
 import browser from 'browser-sync';
-import { deleteAsync } from 'del'; 'del';
+import { deleteAsync } from 'del';
 import gulp from 'gulp';
 import cheerio from 'gulp-cheerio';
 import csso from 'postcss-csso';
@@ -26,16 +26,8 @@ export const styles = () => {
       autoprefixer()
     ]))
     .pipe(rename('style.css'))
-    .pipe(gulp.dest('source/css', { sourcemaps: '.' }))
-    .pipe(browser.stream());
-}
-
-const minCSS = () => {
-  return gulp.src('source/less/style.less', { sourcemaps: true })
-  .pipe(plumber())
-  .pipe(less())
+    .pipe(gulp.dest('build/css', { sourcemaps: '.' }))
     .pipe(postcss([
-      autoprefixer(),
       csso()
     ]))
     .pipe(rename('style.min.css'))
@@ -51,15 +43,20 @@ const copyFiles = () => {
   'source/*.ico',
   'source/*.html'
   ], {base: 'source'})
-    .pipe(gulp.dest('build'))
+    .pipe(gulp.dest('build'));
 }
 
 // JS
 
 const minJS = () => {
   return gulp.src('source/js/*.js')
+    .pipe(gulp.dest('build/js'))
     .pipe(terser())
-    .pipe(gulp.dest('build/js'));
+    .pipe(rename(function (path) {
+      path.basename += "-min";
+    }))
+    .pipe(gulp.dest('build/js'))
+    .pipe(browser.stream());
 }
 
 // Images
@@ -78,6 +75,13 @@ const createWebp = () => {
   return gulp.src(['source/img/**/*.{jpg,png}', '!source/img/favicons/**'])
     .pipe(webp({quality: 90}))
     .pipe(gulp.dest('build/img'));
+}
+
+const copyImages = () => {
+  return gulp.src([
+  'source/img/**/*.{jpg,png,svg}',
+  ], {base: 'source'})
+    .pipe(gulp.dest('build'));
 }
 
 // Sprite svg
@@ -103,34 +107,33 @@ const clean = () => {
 
 // Server
 
-function server(done) {
+const server = (done) => {
   browser.init({
     server: {
-      baseDir: 'source'
-    },
+    baseDir: 'build'
+  },
     cors: true,
     notify: false,
     ui: false,
   });
-  done();
+    done();
 }
 
 // Watcher
 
 const watcher = () => {
   gulp.watch('source/less/**/*.less', gulp.series(styles));
-  gulp.watch('source/js/*.js').on('change', browser.reload);
+  gulp.watch('source/js/*.js', gulp.series(minJS));
   gulp.watch('source/*.html').on('change', browser.reload);
 }
 
 // Build
 
 export const build = gulp.series(
-  clean,
+    clean,
   gulp.parallel(
     copyFiles,
     styles,
-    minCSS,
     minJS,
     imagesOpti,
     createWebp,
@@ -140,5 +143,17 @@ export const build = gulp.series(
 
 
 export default gulp.series(
-  styles, server, watcher
+  clean,
+  copyImages,
+  gulp.parallel(
+    copyFiles,
+    styles,
+    minJS,
+    createWebp,
+    spriteSvg
+  ),
+  gulp.series(
+    server,
+    watcher
+  )
 );
