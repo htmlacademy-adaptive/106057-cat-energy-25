@@ -23,11 +23,7 @@ export const styles = () => {
     .pipe(plumber())
     .pipe(less())
     .pipe(postcss([
-      autoprefixer()
-    ]))
-    .pipe(rename('style.css'))
-    .pipe(gulp.dest('build/css', { sourcemaps: '.' }))
-    .pipe(postcss([
+      autoprefixer(),
       csso()
     ]))
     .pipe(rename('style.min.css'))
@@ -50,7 +46,6 @@ const copyFiles = () => {
 
 const minJS = () => {
   return gulp.src('source/js/*.js')
-    .pipe(gulp.dest('build/js'))
     .pipe(terser())
     .pipe(rename(function (path) {
       path.basename += "-min";
