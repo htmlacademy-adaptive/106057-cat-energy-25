@@ -4,6 +4,7 @@ import { deleteAsync } from 'del';
 import gulp from 'gulp';
 import cheerio from 'gulp-cheerio';
 import csso from 'postcss-csso';
+import htmlmin from 'gulp-htmlmin';
 import imagemin from 'gulp-imagemin';
 import less from 'gulp-less';
 import mozjpeg from 'imagemin-mozjpeg';
@@ -31,13 +32,20 @@ export const styles = () => {
     .pipe(browser.stream());
 }
 
+// HTML
+
+const minHTML = () => {
+  return gulp.src('source/*.html')
+    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(gulp.dest('build'));
+};
+
 // Copy files
 
 const copyFiles = () => {
   return gulp.src([
   'source/fonts/*.{woff2,woff}',
-  'source/*.ico',
-  'source/*.html'
+  'source/*.ico'
   ], {base: 'source'})
     .pipe(gulp.dest('build'));
 }
@@ -48,7 +56,7 @@ const minJS = () => {
   return gulp.src('source/js/*.js')
     .pipe(terser())
     .pipe(rename(function (path) {
-      path.basename += "-min";
+      path.basename += ".min";
     }))
     .pipe(gulp.dest('build/js'))
     .pipe(browser.stream());
@@ -129,6 +137,7 @@ export const build = gulp.series(
   gulp.parallel(
     copyFiles,
     styles,
+    minHTML,
     minJS,
     imagesOpti,
     createWebp,
@@ -143,6 +152,7 @@ export default gulp.series(
   gulp.parallel(
     copyFiles,
     styles,
+    minHTML,
     minJS,
     createWebp,
     spriteSvg
