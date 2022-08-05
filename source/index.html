@@ -11,6 +11,8 @@
     <link rel="icon" type="image/svg+xml" href="img/favicons/16.svg">
     <link rel="icon" type="image/svg+xml" href="img/favicons/32.svg">
     <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="img/favicons/apple-icon-180x180.png">
+    <link rel="preload" href="fonts/oswaldregular.woff2" as="font">
+    <link rel="preload" href="fonts/oswaldmedium.woff2" as="font">
   </head>
 
   <body class="page-body">
@@ -145,6 +147,13 @@
             <div class="slider__images">
               <div class="slider__image-container slider__image-container--before">
                 <picture>
+                  <source type="image/webp" media="(min-width: 1440px)"
+                    srcset="img/content/cat-porky-tablet@1x.webp 1x, img/content/cat-porky-tablet@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)"
+                    srcset="img/content/cat-porky-tablet@1x.webp 1x, img/content/content/cat-porky-tablet@2x.webp 2x">
+                  <source type="image/webp"
+                    srcset="img/content/cat-porky-mobile@1x.webp 1x, img/content/cat-porky-mobile@2x.webp 2x">
+
                   <source media="(min-width: 1440px)"
                     srcset="img/content/cat-porky-tablet@1x.png 1x, img/content/cat-porky-tablet@2x.png 2x">
                   <source media="(min-width: 768px)"
@@ -156,6 +165,13 @@
               </div>
               <div class="slider__image-container slider__image-container--after">
                 <picture>
+                  <source type="image/webp" media="(min-width: 1440px)"
+                    srcset="img/content/cat-skinny-tablet@1x.webp 1x, img/content/cat-skinny-tablet@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)"
+                    srcset="img/content/cat-skinny-tablet@1x.webp 1x, img/content/content/cat-skinny-tablet@2x.webp 2x">
+                  <source type="image/webp"
+                    srcset="img/content/cat-skinny-tablet@1x.webp 1x, img/content/cat-skinny-tablet@2x.webp 2x">
+
                   <source media="(min-width: 1440px)"
                     srcset="img/content/cat-skinny-tablet@1x.png 1x, img/content/cat-skinny-tablet@2x.png 2x">
                   <source media="(min-width: 768px)"
@@ -233,6 +249,6 @@
       </section>
     </footer>
 
-    <script src="js/nav-toggle-min.js"></script>
+    <script src="js/nav-toggle.min.js"></script>
   </body>
 </html>
